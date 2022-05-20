@@ -1,7 +1,8 @@
 import React from 'react'
-import LinkTo from './components/LinkTo'
-import SectionHeading from './components/SectionHeading'
-import BoldParagraph from './components/BoldParagraph'
+import LinkTo from './components/LinkTo.jsx'
+import SectionHeading from './components/SectionHeading.jsx'
+import BoldParagraph from './components/BoldParagraph.jsx'
+import FoodItems from './components/FoodItems.jsx'
 
 const App = () => {
     return (
@@ -41,30 +42,14 @@ const App = () => {
             </section>
             <section id="fav-foods">
                 <SectionHeading text="My Fave Foods" />
-                <article>
-                    <h4>Pizza</h4>
-                    <img src="pizza.jpg" alt="pizza"/>
-                    <p>Best time to eat: <span>All the time</span></p>
-                    <p>Best place: <span>Queen Margharitas</span></p>
-                </article>
-                <article>
-                    <h4>Quesadillas</h4>
-                    <img src="quesadilla.jpg" alt="quesadillas"/>
-                    <p>Best time to eat: <span>Afternoon Siesta</span></p>
-                    <p>Best place: <span>Mejico</span></p>
-                </article>
-                <article>
-                    <h4>Icecream Pancakes</h4>
-                    <img src="icecream_pancakes.jpg" alt="pancakes"/>
-                    <p>Best time to eat: <span>Brekky</span></p>
-                    <p>Best place: <span>Pancakes on the Rocks</span></p>
-                </article>
-                <article>
-                    <h4>Loaded Fries</h4>
-                    <img src="loaded_fries.jpg" alt="fries"/>
-                    <p>Best time to eat: <span>During the game</span></p>
-                    <p>Best place: <span>My House</span></p>
-                </article>
+                <FoodItems name="Pizza" src="pizza.jpg" time="All the time" place="Queen Margharitas" />
+
+                <FoodItems name="Quesadilla" src="quesadilla.jpg" time="Afternoon Siesta" place="Mejico" />
+                
+                <FoodItems name="Icecream Pancakes" src="icecream_pancakes.jpg" time="Brekky" place="Pancakes on the Rocks" />
+
+                <FoodItems name="Loaded Fries" src="loaded_fries.jpg" time="During the game" place="My House" />
+
             </section>
             <section id="contact">
                 <SectionHeading text="Get in Touch!" />
