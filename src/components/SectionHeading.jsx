@@ -1,10 +1,11 @@
 import React from "react"
+import LinkTo from "./LinkTo"
 
 const SectionHeading = (props) => {
     return (
         <div>
         <h2>{props.text}</h2>
-        <a className="external" href="#top">Top</a>
+        <LinkTo href="#top" text="Top" />
     </div>
 
     )

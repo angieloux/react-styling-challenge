@@ -2,8 +2,9 @@ import React from 'react'
 import LinkTo from './components/LinkTo.jsx'
 import SectionHeading from './components/SectionHeading.jsx'
 import BoldParagraph from './components/BoldParagraph.jsx'
-import FoodItems from './components/FoodItems.jsx'
+import FoodItem from './components/FoodItem.jsx'
 import ListItems from './components/ListItems.jsx'
+import Section from './components/Section.jsx'
 
 const App = () => {
     return (
@@ -23,8 +24,8 @@ const App = () => {
                     </ul>
                 </nav>
             </header>
-            <section id="about-me">
-                <SectionHeading text="This is Me!" />
+
+            <Section name="about-me" heading="This is Me!">
                 <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="profilePic"/>
                 <article>
                     <ol>
@@ -39,28 +40,30 @@ const App = () => {
                             ]} />
                     </ol>
                 </article>
-            </section>
-            <section id="fav-foods">
-                <SectionHeading text="My Fave Foods" />
-                <FoodItems name="Pizza" src="pizza.jpg" time="All the time" place="Queen Margharitas" />
+                </Section>
 
-                <FoodItems name="Quesadilla" src="quesadilla.jpg" time="Afternoon Siesta" place="Mejico" />
+            
+            <Section name="fav-foods" heading="My Fave Foods!">
+                <FoodItem name="Pizza" src="pizza.jpg" time="All the time" place="Queen Margharitas" />
+
+                <FoodItem name="Quesadillas" src="quesadilla.jpg" time="Afternoon Siesta" place="Mejico" />
                 
-                <FoodItems name="Icecream Pancakes" src="icecream_pancakes.jpg" time="Brekky" place="Pancakes on the Rocks" />
+                <FoodItem name="Icecream Pancakes" src="icecream_pancakes.jpg" time="Brekky" place="Pancakes on the Rocks" />
 
-                <FoodItems name="Loaded Fries" src="loaded_fries.jpg" time="During the game" place="My House" />
+                <FoodItem name="Loaded Fries" src="loaded_fries.jpg" time="During the game" place="My House" />
 
-            </section>
-            <section id="contact">
-                <SectionHeading text="Get in Touch!" />
+            </Section>
 
-                <BoldParagraph firstWord="Phone:" theRest={<LinkTo external={true} href="tel:12345678" text="12345678"/>}/>
+            <Section name="contact" heading="Get in Touch!">
 
-                <BoldParagraph firstWord="Email:" theRest={<LinkTo external={true} href="mailto:test@test" text="thatsme@test.com"/>}/>
+                <BoldParagraph firstWord="Phone:" theRest={<LinkTo external={true} href="tel:12345678" text="+12345678"/>}/>
+
+                <BoldParagraph firstWord="Email:" theRest={<LinkTo external={true} href="mailto:test@test.com" text="thatsme@test.com"/>}/>
 
                 <BoldParagraph firstWord="Twitter:" theRest={<LinkTo external={true} href="#twitter" text="#superfun"/>}/>
                 
-            </section>
+            </Section>
+
             <footer>
             <h5>Thanks for visiting my profile. Hope to here from you soon!</h5>
         </footer>
@@ -74,7 +77,7 @@ export {
     LinkTo,
     SectionHeading,
     BoldParagraph,
-    FoodItems,
-    ListItems
-    // Section
+    FoodItem,
+    ListItems,
+    Section
 }
