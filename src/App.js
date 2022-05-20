@@ -68,18 +68,13 @@ const App = () => {
             </section>
             <section id="contact">
                 <SectionHeading text="Get in Touch!" />
-                <p>
-                    <b>Phone:</b> 
-                    <LinkTo external={true} href="tel:12345678" text="12345678"/>
-                </p>
-                <p>
-                    <b>Email:</b> 
-                    <LinkTo external={true} href="mailto:test@test" text="thatsme@test.com"/>
-                </p>
-                <p>
-                    <b>Twitter:</b> 
-                    <LinkTo external={true} href="#twitter" text="#superfun"/>
-                </p>
+
+                <BoldParagraph firstWord="Phone:" theRest={<LinkTo external={true} href="tel:12345678" text="12345678"/>}/>
+
+                <BoldParagraph firstWord="Email:" theRest={<LinkTo external={true} href="mailto:test@test" text="thatsme@test.com"/>}/>
+
+                <BoldParagraph firstWord="Twitter:" theRest={<LinkTo external={true} href="#twitter" text="#superfun"/>}/>
+                
             </section>
             <footer>
             <h5>Thanks for visiting my profile. Hope to here from you soon!</h5>
