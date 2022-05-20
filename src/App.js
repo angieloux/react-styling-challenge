@@ -1,6 +1,7 @@
 import React from 'react'
 import LinkTo from './components/LinkTo'
 import SectionHeading from './components/SectionHeading'
+import BoldParagraph from './components/BoldParagraph'
 
 const App = () => {
     return (
@@ -24,24 +25,16 @@ const App = () => {
                 <article>
                     <ol>
                         <li>
-                            <p>
-                                <b>Pop</b> culture maven. Beer fan. Award-winning music junkie. Extreme coffee enthusiast. Thinker. Tv specialist.
-                            </p>
+                        <BoldParagraph firstWord="Pop" theRest="culture maven. Beer fan. Award-winning music junkie. Extreme coffee enthusiast. Thinker. Tv specialist."/>
                         </li>
                         <li>
-                            <p>
-                                <b>Friendly</b> web maven. Bacon lover. General internet specialist. Incurable travel scholar.
-                            </p>
+                        <BoldParagraph firstWord="Friendly" theRest="web maven. Bacon lover. General internet specialist. Incurable travel scholar."/>
                         </li>
                         <li>
-                            <p>
-                                <b>Subtly</b> charming twitter lover. Social media fan. Incurable travel geek. Lifelong pop culture specialist. Tv scholar.
-                            </p>
+                        <BoldParagraph firstWord="Subtly" theRest="charming twitter lover. Social media fan. Incurable travel geek. Lifelong pop culture specialist. Tv scholar."/>
                         </li>
                         <li>
-                            <p>
-                                <b>Unable</b> to type with boxing gloves on. Proud bacon fan. Music junkie. Coffee ninja. Beer specialist.
-                            </p>
+                        <BoldParagraph firstWord="Unable" theRest="to type with boxing gloves on. Proud bacon fan. Music junkie. Coffee ninja. Beer specialist."/>
                         </li>
                     </ol>
                 </article>
@@ -99,8 +92,8 @@ export default App
 
 export {
     LinkTo,
-    SectionHeading
-    // BoldParagraph,
+    SectionHeading,
+    BoldParagraph
     // FoodItem,
     // ListItems,
     // Section
