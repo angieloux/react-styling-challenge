@@ -86,15 +86,15 @@ const App = () => {
                 </div>
                 <p>
                     <b>Phone:</b> 
-                    <LinkTo href="tel:12345678" text="12345678"/>
+                    <LinkTo external={true} href="tel:12345678" text="12345678"/>
                 </p>
                 <p>
                     <b>Email:</b> 
-                    <LinkTo href="mailto:test@test" text="thatsme@test.com"/>
+                    <LinkTo external={true} href="mailto:test@test" text="thatsme@test.com"/>
                 </p>
                 <p>
                     <b>Twitter:</b> 
-                    <LinkTo href="#twitter" text="#superfun"/>
+                    <LinkTo external={true} href="#twitter" text="#superfun"/>
                 </p>
             </section>
             <footer>
@@ -107,7 +107,8 @@ const App = () => {
 export default App
 
 export {
-    LinkTo
+    LinkTo,
+    LinkTop
     // SectionHeading,
     // BoldParagraph,
     // FoodItem,
