@@ -3,6 +3,7 @@ import LinkTo from './components/LinkTo.jsx'
 import SectionHeading from './components/SectionHeading.jsx'
 import BoldParagraph from './components/BoldParagraph.jsx'
 import FoodItems from './components/FoodItems.jsx'
+import ListItems from './components/ListItems.jsx'
 
 const App = () => {
     return (
@@ -11,12 +12,14 @@ const App = () => {
                 <h1>Welcome To Sandras Profile Page</h1>
                 <nav>
                     <ul>
-                        <li><LinkTo href="#about-me" text="About Me"/></li>
+                        <ListItems items={[
+                            <LinkTo href="#about-me" text="About Me"/>,
 
-                        <li><LinkTo href="#fav-foods" text="Favourite Foods"/></li>
-
-                        <li><LinkTo href="#contact" text="Contact Details"/></li>
-
+                            <LinkTo href="#fav-foods" text="Favourite Foods"/>,
+    
+                            <LinkTo href="#contact" text="Contact Details"/>
+                        ]}
+                        />
                     </ul>
                 </nav>
             </header>
@@ -25,18 +28,15 @@ const App = () => {
                 <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="profilePic"/>
                 <article>
                     <ol>
-                        <li>
-                        <BoldParagraph firstWord="Pop" theRest="culture maven. Beer fan. Award-winning music junkie. Extreme coffee enthusiast. Thinker. Tv specialist."/>
-                        </li>
-                        <li>
-                        <BoldParagraph firstWord="Friendly" theRest="web maven. Bacon lover. General internet specialist. Incurable travel scholar."/>
-                        </li>
-                        <li>
-                        <BoldParagraph firstWord="Subtly" theRest="charming twitter lover. Social media fan. Incurable travel geek. Lifelong pop culture specialist. Tv scholar."/>
-                        </li>
-                        <li>
-                        <BoldParagraph firstWord="Unable" theRest="to type with boxing gloves on. Proud bacon fan. Music junkie. Coffee ninja. Beer specialist."/>
-                        </li>
+                        <ListItems items={[
+                            <BoldParagraph firstWord="Pop" theRest="culture maven. Beer fan. Award-winning music junkie. Extreme coffee enthusiast. Thinker. Tv specialist."/>,
+
+                            <BoldParagraph firstWord="Friendly" theRest="web maven. Bacon lover. General internet specialist. Incurable travel scholar."/>,
+
+                            <BoldParagraph firstWord="Subtly" theRest="charming twitter lover. Social media fan. Incurable travel geek. Lifelong pop culture specialist. Tv scholar."/>,
+
+                            <BoldParagraph firstWord="Unable" theRest="to type with boxing gloves on. Proud bacon fan. Music junkie. Coffee ninja. Beer specialist."/>
+                            ]} />
                     </ol>
                 </article>
             </section>
@@ -73,8 +73,8 @@ export default App
 export {
     LinkTo,
     SectionHeading,
-    BoldParagraph
-    // FoodItem,
-    // ListItems,
+    BoldParagraph,
+    FoodItems,
+    ListItems
     // Section
 }
