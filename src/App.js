@@ -1,4 +1,6 @@
 import React from 'react'
+import LinkTo from './components/LinkTo'
+import LinkTop from './components/LinkTop'
 
 const App = () => {
     return (
@@ -7,16 +9,19 @@ const App = () => {
                 <h1>Welcome To Sandras Profile Page</h1>
                 <nav>
                     <ul>
-                        <li><a className="internal" href="#about-me">About Me</a></li>
-                        <li><a className="internal" href="#fav-foods">Favourite Foods</a></li>
-                        <li><a className="internal" href="#contact">Contact Details</a></li>
+                        <li><LinkTo href="#about-me" text="About Me"/></li>
+
+                        <li><LinkTo href="#fav-foods" text="Favourite Foods"/></li>
+
+                        <li><LinkTo href="#contact" text="Contact Details"/></li>
+
                     </ul>
                 </nav>
             </header>
             <section id="about-me">
                 <div>
                     <h2>This is Me!</h2>
-                    <a className="external" href="#top">Top</a>
+                    <LinkTop />
                 </div>
                 <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="profilePic"/>
                 <article>
@@ -47,7 +52,7 @@ const App = () => {
             <section id="fav-foods">
                 <div>
                     <h2>My Fave Foods</h2>
-                    <a className="external" href="#top">Top</a>
+                    <LinkTop />
                 </div>
                 <article>
                     <h4>Pizza</h4>
@@ -77,16 +82,19 @@ const App = () => {
             <section id="contact">
                 <div>
                     <h2>Get In Touch!</h2>
-                    <a className="external" href="#top">Top</a>
+                    <LinkTop />
                 </div>
                 <p>
-                    <b>Phone:</b> <a class="external" href="tel:12345678">+12345678</a>
+                    <b>Phone:</b> 
+                    <LinkTo href="tel:12345678" text="12345678"/>
                 </p>
                 <p>
-                    <b>Email:</b> <a class="external" href="mailto:test@test.com">thatsme@test.com</a>
+                    <b>Email:</b> 
+                    <LinkTo href="mailto:test@test" text="thatsme@test.com"/>
                 </p>
                 <p>
-                    <b>Twitter:</b> <a class="external" href="#twitter">#superfun</a> 
+                    <b>Twitter:</b> 
+                    <LinkTo href="#twitter" text="#superfun"/>
                 </p>
             </section>
             <footer>
@@ -99,7 +107,7 @@ const App = () => {
 export default App
 
 export {
-    // LinkTo,
+    LinkTo
     // SectionHeading,
     // BoldParagraph,
     // FoodItem,
