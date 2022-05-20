@@ -1,6 +1,6 @@
 import React from 'react'
 import LinkTo from './components/LinkTo'
-import LinkTop from './components/LinkTop'
+import SectionHeading from './components/SectionHeading'
 
 const App = () => {
     return (
@@ -19,10 +19,7 @@ const App = () => {
                 </nav>
             </header>
             <section id="about-me">
-                <div>
-                    <h2>This is Me!</h2>
-                    <LinkTop />
-                </div>
+                <SectionHeading text="This is Me!" />
                 <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="profilePic"/>
                 <article>
                     <ol>
@@ -50,10 +47,7 @@ const App = () => {
                 </article>
             </section>
             <section id="fav-foods">
-                <div>
-                    <h2>My Fave Foods</h2>
-                    <LinkTop />
-                </div>
+                <SectionHeading text="My Fave Foods" />
                 <article>
                     <h4>Pizza</h4>
                     <img src="pizza.jpg" alt="pizza"/>
@@ -80,10 +74,7 @@ const App = () => {
                 </article>
             </section>
             <section id="contact">
-                <div>
-                    <h2>Get In Touch!</h2>
-                    <LinkTop />
-                </div>
+                <SectionHeading text="Get in Touch!" />
                 <p>
                     <b>Phone:</b> 
                     <LinkTo external={true} href="tel:12345678" text="12345678"/>
@@ -108,8 +99,7 @@ export default App
 
 export {
     LinkTo,
-    LinkTop
-    // SectionHeading,
+    SectionHeading
     // BoldParagraph,
     // FoodItem,
     // ListItems,
